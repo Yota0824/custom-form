@@ -16,5 +16,5 @@ createRoot(document.getElementById('root')).render(
         <Route path='/post' element={<PostPractice />} />
       </Routes>
     </BrowserRouter>
-  </StrictMode>,
+  </StrictMode>
 )
