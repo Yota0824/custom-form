@@ -1,6 +1,6 @@
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from .models import TestPost
+from ..models import TestPost
 # Create your views here.
 class TestAPIView(APIView):
     def get(self,request):
@@ -20,4 +20,4 @@ class TestAPIView(APIView):
 
         TestPost.objects.create(message=message)
 
-        return Response("OK")
+        return Response("OK")   

@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { useNavigate } from 'react-router';
 
 function TopPage() {
-    const navigate = useNavigate();
-   const [formData, setFormData] = useState({
+  const navigate = useNavigate();
+  const [formData, setFormData] = useState({
     schoolCode: '',
     schoolName: '',
     managerName: '',
@@ -64,22 +64,22 @@ function TopPage() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     const newErrors = {
-        schoolCode: formData.schoolCode.length !== 4,
-        schoolName: formData.schoolName === '' || !formData.schoolName.endsWith("校"),
-        managerName: formData.managerName === '',
-        processingDate: formData.processingDate === '',
-        file: !formData.file,
+      schoolCode: formData.schoolCode.length !== 4,
+      schoolName: formData.schoolName === '' || !formData.schoolName.endsWith("校"),
+      managerName: formData.managerName === '',
+      processingDate: formData.processingDate === '',
+      file: !formData.file,
     };
-    
+
     setErrors(newErrors);
-    
+
     if (Object.values(newErrors).some((error) => error) || !consentChecked) {
-        alert("赤く表示されたエラーを修正し、確認事項に同意してください。");
-        return;
+      alert("赤く表示されたエラーを修正し、確認事項に同意してください。");
+      return;
     }
-    
+
     navigate("/complete");
     console.log('フォームデータ送信:', formData);
   };

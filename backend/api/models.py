@@ -7,3 +7,6 @@ class Account(AbstractUser):
 
 class TestPost(models.Model):
     message = models.CharField(max_length=100)
+
+class SumResult(models.Model):
+    result = models.IntegerField(max_length=10)
