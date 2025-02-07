@@ -1,5 +1,6 @@
-import { useState } from 'react'
-import './App.css'
+import { useState } from 'react';
+import './App.css';
+
 
 function App() {
    // フォームフィールドの状態管理
@@ -86,6 +87,7 @@ function App() {
 
   return (
     <>
+
       <div className="flex items-start justify-center min-h-screen pt-[120px] bg-gray-100">
         <div className="bg-white shadow-lg rounded-lg p-6 max-w-lg w-full">
           <h1 className="text-3xl font-bold mb-2 text-gray-800">学校情報フォーム</h1>
