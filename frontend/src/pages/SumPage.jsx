@@ -4,7 +4,7 @@ import { useState } from "react";
 // import { Button } from "@/components/ui/button";
 
 import { Button } from "../components/Button";
-import { NumberInput } from "../components/NumberInput";
+import { NumberInput } from "../components/ShoolIdInput";
 
 export default function SumPage() {
   const [num1, setNum1] = useState("");
