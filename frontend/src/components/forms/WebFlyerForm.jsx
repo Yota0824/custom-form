@@ -11,9 +11,7 @@ import { TextLavel } from "../TextLavel";
 export const WebFlyerForm = () => {
   const [school_id, set_school_id] = useState("");
   const [apply_name, set_apply_name] = useState("");
-  const [error_msg, set_error_msg] = useState("");
   const navigate = useNavigate();
-
 
 
   const onSubmit = async () => {
@@ -22,6 +20,7 @@ export const WebFlyerForm = () => {
     if (response.ok) {
       navigate("/");
     }
+
 
   };
 
