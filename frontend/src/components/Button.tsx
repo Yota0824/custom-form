@@ -14,5 +14,6 @@ export const Button = ({ type, variant="primary", onClick, children }) => {
     >
       {children}
     </button>
+
   );
 };

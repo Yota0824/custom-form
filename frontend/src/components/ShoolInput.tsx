@@ -1,6 +1,11 @@
 import React from "react";
+import { useState } from "react";
+
 
 export const SchoolInput = ({ value, onChange }) => {
+  const [school_id, set_school_id] = useState("");
+
+  // 校舎コードがなかった場合はエラーにしたい
   return (
     <div>
       <div className="mb-6">
@@ -16,6 +21,7 @@ export const SchoolInput = ({ value, onChange }) => {
           value={value}
           onChange={onChange}
           required
+          maxLength={4}
         />
       </div>
       <div className="mb-6">
