@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 function TopPage() {
+
   return (
     <div className="h-screen bg-gray-100 flex items-center justify-center">
       <ul className="bg-white border">
@@ -19,6 +20,7 @@ function TopPage() {
       </ul>
     </div>
   );
+
 }
 
 export default TopPage;

@@ -10,6 +10,7 @@ export const Button = ({ type, variant="primary", onClick, children }) => {
        ${variant == "secandary" && "bg-gray-500 hover:bg-gray-600"}
       `}
       type={type}
+
     >
       {children}
     </button>
