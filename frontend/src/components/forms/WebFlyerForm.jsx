@@ -1,35 +1,27 @@
-
 import { useState } from "react";
 
 import { useNavigate } from "react-router";
 import { Button } from "../Button";
 import { SchoolInput } from "../ShoolInput";
-import { TextLavel } from "../TextLavel";
-
-
+import { TextInput } from "../TextInput";
+import {DateInput} from "../DateInput"
 
 export const WebFlyerForm = () => {
   const [school_id, set_school_id] = useState("");
   const [apply_name, set_apply_name] = useState("");
   const navigate = useNavigate();
 
-
   const onSubmit = async () => {
-    // TODO 
+    // TODO
 
     if (response.ok) {
       navigate("/");
     }
-
-
   };
 
   const onClick = () => {
     navigate("/");
   };
-
-
-
 
   return (
     <div className="flex items-center justify-center min-h-screen pt-[120px] bg-gray-100">
@@ -41,26 +33,17 @@ export const WebFlyerForm = () => {
             value={school_id}
             onChange={(e) => set_school_id(e.target.value)}
           />
-
-
-          <TextLavel
+          <TextInput
             label="送信者名1"
-
-
             value={apply_name}
             placeholder="武田太郎"
             onChange={(e) => set_apply_name(e.target.value)}
           />
-          <DateInput
-            label="対象年月"
-            />
-
+          <DateInput label="対象年月" />
           <Button type="submit">フォームを回答</Button>
           <Button variant="secandary" type="button" onClick={onClick}>
             キャンセル
           </Button>
-
-
         </form>
       </div>
     </div>
