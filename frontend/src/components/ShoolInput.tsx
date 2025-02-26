@@ -2,7 +2,7 @@ import React from "react";
 import { useState,useEffect } from "react";
 
 
-export const SchoolInput = ({ value, onChange }) => {
+export const SchoolInput = ({ name,value, onChange }) => {
   // const [school_id, set_school_id] = useState("");
   const [error_msg, set_error_msg] = useState("");
 
@@ -26,6 +26,7 @@ export const SchoolInput = ({ value, onChange }) => {
         </label>
         <input
           type="text"
+          name={name}
           className="p-3 border rounded-md w-full"
           placeholder="1300"
           value={value}
@@ -46,6 +47,8 @@ export const SchoolInput = ({ value, onChange }) => {
           {/* {school_name}校 */}
           御茶ノ水本校
         </label>
+        {/* APIと連携して正しい値を連携する */}
+        <input type="hidden" name="school_name" value="御茶ノ水本校"/>
       </div>
     </div>
   );
