@@ -1,6 +1,6 @@
 import React from "react";
 
-export const TextInput = ({ label,value,onChange,placeholder }) => {
+export const TextInput = ({ name, label,value,onChange,placeholder }) => {
   return (
       <div className="mb-6">
         <label
@@ -10,6 +10,7 @@ export const TextInput = ({ label,value,onChange,placeholder }) => {
         </label>
         <input
           type="text"
+          name={name}
           className="p-3 border rounded-md w-full"
           placeholder={placeholder}
           value={value}
