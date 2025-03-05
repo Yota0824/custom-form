@@ -18,6 +18,11 @@ export const WebFlyerForm = () => {
     const formData = new FormData(e.currentTarget);
     console.log("formData",formData);
     console.log(Object.fromEntries(formData));
+
+    const response = await fetch("http://127.0.0.1:8000/api/upload-excel/",{
+      method:"POST",
+      body:formData,
+    });
     // TODO
 
     // if (response.ok) {
