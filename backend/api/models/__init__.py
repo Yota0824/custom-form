@@ -5,7 +5,6 @@ from django.contrib.auth.models import AbstractUser
 class Account(AbstractUser):
     username = models.CharField(max_length=50, unique=True)
 
-
 class TestPost(models.Model):
     message = models.CharField(max_length=100)
 
@@ -45,3 +44,4 @@ class WebFlyerFlyer(models.Model): #ビラ配布
     place_detail3 = models.CharField(max_length=100)
     flyer_count3 = models.IntegerField()
     memo3 = models.CharField(max_length=100)
+
