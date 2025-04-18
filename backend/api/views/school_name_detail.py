@@ -3,6 +3,7 @@ from api.models.School import School
 from rest_framework.response import Response
 
 class SchoolNameDtailView(APIView):
+    # 校舎コードから校舎名を取得する
     def get(self,request,id):
         try:
             school = School.objects.get(school_id=id)

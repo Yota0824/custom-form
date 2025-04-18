@@ -4,6 +4,7 @@ from rest_framework.response import Response
 from api.models.School import School
 
 class UpdateSchoolView(APIView):
+    # 月次で校舎をtakeda.tvより取得しDBを更新する
     def put(self,request):
         data = MOCK_SCHOOL_LIST # fecth　APIとってくる場所
 

@@ -1,5 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from .WebFlyer import WebFlyer
+from .WebFlyerComment import WebFlyerComment
+from .WebFlyerFlyer import WebFlyerFlyer
+from .WebFlyerNewsPaper import WebFlyerNewsPaper
+from .WebFlyerPosting import WebFlyerPosting
+from .WebFlyerOtherMedia import WebFlyerOtherMedia
+from .WebFlyerWebMadia import WebFlyerWebMadia
 
 
 class Account(AbstractUser):
@@ -11,4 +18,3 @@ class TestPost(models.Model):
 
 class SumResult(models.Model):
     result = models.IntegerField()
-    

@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class WebFlyerOtherMedia(models.Model): #その他配布配布
+class WebFlyerWebMadia(models.Model): #その他配布配布
     school_id = models.CharField(max_length=4)
     school_name = models.CharField(max_length=20)
     apply_year = models.IntegerField() #年月が入るがこれでいい？
