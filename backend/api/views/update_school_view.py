@@ -13,6 +13,8 @@ class UpdateSchoolView(APIView):
             school_id = row.get("school_id")
             visible_name = row.get("visible_name")
 
+            # やること　年月の分離とエクセルの中身をDBに突っ込む
+
             if school_id and visible_name:
                 School.objects.update_or_create(
                     school_id = school_id,

@@ -52,7 +52,7 @@ export const WebFlyerForm = () => {
             placeholder="武田太郎"
             onChange={(e) => set_apply_name(e.target.value)}
           />
-          <DateInput label="対象年月" onChange={(file) => set_file(file)}/>
+          <DateInput name="apply_date" label="対象年月" onChange={(file) => set_file(file)}/>
           <ExcelInput label={"Excelファイルアップロード"} name="file"/>
           <Button type="submit">フォームを回答</Button>
           <Button variant="secandary" type="button" onClick={onClick}>
