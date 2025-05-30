@@ -10,13 +10,13 @@ services:
       MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
     volumes:
-      - db_data:/ver/lib/mysql
+      - db_data:/var/lib/mysql
     ports:
       - "3306:3306"
 
   backend:
     build: .
-    command: python manage.py runserver 0.0.0.0:8000
+    command:
     volumes:
       - .:/code
     ports:
